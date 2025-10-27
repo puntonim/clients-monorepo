@@ -1,0 +1,41 @@
+interactions:
+- request:
+    body: '{"Name": "/test/aws/parameter/store/client", "Description": "string", "Value":
+      "yesss!", "Type": "String", "Overwrite": false}'
+    headers:
+      Content-Length:
+      - '126'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjE=
+      X-Amz-Target:
+      - !!binary |
+        QW1hem9uU1NNLlB1dFBhcmFtZXRlcg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZWIzOWMzZjctNmUyNS00NDEzLWFlY2QtZmE4NDVkODUyNjc4
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://ssm.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"Tier":"Standard","Version":1}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '31'
+      Content-Type:
+      - application/x-amz-json-1.1
+      Date:
+      - Mon, 27 Jan 2025 14:08:02 GMT
+      Server:
+      - Server
+      x-amzn-RequestId:
+      - 9c659aac-e0e0-4419-966f-e2a2e6b2c79d
+    status:
+      code: 200
+      message: OK
+version: 1

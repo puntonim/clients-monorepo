@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: '{"Name": "/test/aws/parameter/store/client"}'
+    headers:
+      Content-Length:
+      - '44'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjE=
+      X-Amz-Target:
+      - !!binary |
+        QW1hem9uU1NNLkdldFBhcmFtZXRlcg==
+      amz-sdk-invocation-id:
+      - !!binary |
+        NGQwOTU1ZTUtODA5Zi00NTFlLTgzNjktNzIxYzZkMzQzMzcz
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: POST
+    uri: https://ssm.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"Parameter":{"ARN":"arn:aws:ssm:eu-south-1:477353422995:parameter/test/aws/parameter/store/client","DataType":"text","LastModifiedDate":1.737987476052E9,"Name":"/test/aws/parameter/store/client","Type":"String","Value":"nooo!","Version":2}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '241'
+      Content-Type:
+      - application/x-amz-json-1.1
+      Date:
+      - Mon, 27 Jan 2025 14:19:49 GMT
+      Server:
+      - Server
+      x-amzn-RequestId:
+      - 44561dfe-f2d4-4875-bb93-1ac181e48a97
+    status:
+      code: 200
+      message: OK
+version: 1
