@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: '{"Name": "/test/aws/parameter/store/client"}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '44'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjE=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MSBtZC9Cb3RvY29yZSMxLjQwLjYxIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL24s
+        WixiLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjE=
+    method: POST
+    uri: https://ssm.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"Parameter":{"ARN":"arn:aws:ssm:eu-south-1:477353422995:parameter/test/aws/parameter/store/client","DataType":"text","LastModifiedDate":1.761745982202E9,"Name":"/test/aws/parameter/store/client","Type":"String","Value":"nooo!","Version":1}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '241'
+      Content-Type:
+      - application/x-amz-json-1.1
+      Date:
+      - Wed, 29 Oct 2025 14:24:33 GMT
+      Server:
+      - Server
+      x-amzn-RequestId:
+      - 7ce3454e-088e-4d7c-b0e9-dbae29d02aed
+    status:
+      code: 200
+      message: OK
+version: 1

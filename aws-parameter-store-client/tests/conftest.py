@@ -89,13 +89,12 @@ def get_match_on() -> tuple:
 #        `filter_query_parameters` in vcr_config().
 #     """
 #     # Redact Telegram secret in the url (but it's not a query param).
-#     for _ in range(len(request.query)):
-#         if "api.telegram.org/bot" in request.uri:
-#             request.uri = re.sub(
-#                 r"api.telegram.org/bot([^/]+)",
-#                 "api.telegram.org/bot**REDACTED**",
-#                 request.uri,
-#             )
+#     if "api.telegram.org/bot" in request.uri:
+#         request.uri = re.sub(
+#             r"api.telegram.org/bot([^/]+)",
+#             "api.telegram.org/bot**REDACTED**",
+#             request.uri,
+#         )
 #     return request
 
 
@@ -143,6 +142,9 @@ def vcr_config():
             ("X-Amz-Security-Token", "**REDACTED**"),
             ("X-Amz-Content-SHA256", "**REDACTED**"),
             "X-Amz-Date",
+            "X-Amz-Target",
+            "amz-sdk-invocation-id",
+            "amz-sdk-request",
         ),
         #
         ## Filter REQUEST query param like in:
