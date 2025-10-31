@@ -246,6 +246,23 @@ files = [
 ]
 
 [[package]]
+name = "json-utils"
+version = "1.0.0"
+description = "Utils Monorepo: JSON Utils"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = []
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/puntonim/utils-monorepo"
+reference = "HEAD"
+resolved_reference = "902d14425e776574322e9fe9e9ea75d45112ddd9"
+subdirectory = "json-utils"
+
+[[package]]
 name = "matplotlib-inline"
 version = "0.2.1"
 description = "Inline Matplotlib backend for Jupyter"
@@ -1371,4 +1388,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "0d014c7279b0f2ec4d96a9deafa060e6273ba0da2bc8e3171115b80543baa529"
+content-hash = "c99c19587d2537efd4faea6b9195185c5cc721c6ea9545713eb1b45604cf9469"

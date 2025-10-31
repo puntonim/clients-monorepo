@@ -6,8 +6,19 @@
 import aws_lambda_client
 
 client = aws_lambda_client.AwsLambdaClient()
+
+payload = {
+    "text": "Hello world from aws-lambda-client pytests!",
+    "sender_app": "AWS_LAMBDA_CLIENT",
+}
 try:
-    resp = self.client.get_lambda_url("botte-be-prod-endpoint-message")
+    resp = self.client.invoke("botte-be-prod-message", payload=payload)
+except aws_lambda_client.LambdaNotFound:
+    ...
+assert resp["StatusCode"] == 200
+
+try:
+    resp = self.client.get_url("botte-be-prod-endpoint-message")
 except aws_lambda_client.LambdaNotFound:
     ...
 assert resp[0] == "https://5t325uqwq7.execute-api.eu-south-1.amazonaws.com"
@@ -17,8 +28,10 @@ assert resp[2] == "POST"
 """
 
 import json
+from typing import Any
 
 import boto3
+import json_utils
 
 __all__ = [
     "AwsLambdaClient",
@@ -39,7 +52,26 @@ class AwsLambdaClient:
         # Docs: https://boto3.amazonaws.com/v1/documentation/api/1.26.92/reference/services/lambda.html
         self.client = boto3.client("lambda")
 
-    def get_lambda_url(self, lambda_name: str) -> tuple[str, str | None, str | None]:
+    def invoke(self, lambda_name: str, payload: Any):
+        """
+        Invoke a Lambda with a payload.
+
+        Args:
+            lambda_name (string): eg. "botte-be-prod-endpoint-message" or
+             "arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-message" or
+             "477353422995:function:botte-be-prod-endpoint-message"
+            payload: anything that can be converted to JSON.
+        """
+        payload = json_utils.to_json(payload)
+        payload = payload.encode()
+        # Docs: https://boto3.amazonaws.com/v1/documentation/api/1.26.92/reference/services/lambda/client/invoke.html
+        try:
+            response = self.client.invoke(FunctionName=lambda_name, Payload=payload)
+        except self.client.exceptions.ResourceNotFoundException as exc:
+            raise LambdaNotFound(lambda_name) from exc
+        return response
+
+    def get_url(self, lambda_name: str) -> tuple[str, str | None, str | None]:
         """
         Get the base HTTP url assigned to a Lambda either with a function URL or
          API Gateway V2.

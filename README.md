@@ -13,7 +13,7 @@ List of clients:
  - [aws-parameter-store-client](aws-parameter-store-client): to read/write parameters 
     and secrets from AWS Parameter Store. 
  - [aws-lambda-client](aws-lambda-client): to get a Lambda URL; to invoke a Lambda with
-    a custom event.
+    a payload.
 
 
 🎯 Target Python version

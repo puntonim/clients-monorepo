@@ -1,0 +1,35 @@
+interactions:
+- request:
+    body: '"Hello world from aws-lambda-client pytests!"'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '45'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixuLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: POST
+    uri: https://lambda.eu-south-1.amazonaws.com/2015-03-31/functions/XXX/invocations
+  response:
+    body:
+      string: '{"Message":"Function not found: arn:aws:lambda:eu-south-1:477353422995:function:XXX:$LATEST","Type":"User"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '107'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 14:49:26 GMT
+      x-amzn-ErrorType:
+      - ResourceNotFoundException
+      x-amzn-RequestId:
+      - 4e4613a1-0464-46cd-9db3-c608293d43f0
+    status:
+      code: 404
+      message: Not Found
+version: 1
