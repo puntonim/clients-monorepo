@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: '{"TableName": "XXX", "KeyConditionExpression": "#n0 = :v0", "ExpressionAttributeNames":
+      {"#n0": "PK"}, "ExpressionAttributeValues": {":v0": {"S": "BOTTE_MESSAGE"}}}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '164'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjA=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1As
+        YixELFosbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS40MC42MyBSZXNvdXJjZQ==
+    method: POST
+    uri: https://dynamodb.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"__type":"com.amazonaws.dynamodb.v20120810#ResourceNotFoundException","message":"Requested
+        resource not found"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '112'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Date:
+      - Fri, 31 Oct 2025 20:08:26 GMT
+      Server:
+      - Server
+      x-amz-crc32:
+      - '3737639027'
+      x-amzn-RequestId:
+      - BHKSFS4BPONFQOINUKQGULJ38NVV4KQNSO5AEMVJF66Q9ASUAAJG
+    status:
+      code: 400
+      message: Bad Request
+version: 1

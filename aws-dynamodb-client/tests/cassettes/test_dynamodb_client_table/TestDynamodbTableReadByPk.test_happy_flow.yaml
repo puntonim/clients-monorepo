@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: '{"TableName": "botte-be-task-prod", "KeyConditionExpression": "#n0 = :v0",
+      "ExpressionAttributeNames": {"#n0": "PK"}, "ExpressionAttributeValues": {":v0":
+      {"S": "BOTTE_MESSAGE"}}}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '179'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjA=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL24s
+        RCxaLFAsYiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS40MC42MyBSZXNvdXJjZQ==
+    method: POST
+    uri: https://dynamodb.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"Count":1,"Items":[{"Payload":{"M":{"text":{"S":"Hello world from
+        (clients-monorepo) DynamoDB Client Pytest"}}},"SenderService":{"S":"DYNAMODB_CLIENT_PYTEST"},"SK":{"S":"2XxEn9LlUFuTyn0tOCySn11smMS"},"TaskId":{"S":"BOTTE_MESSAGE"},"PK":{"S":"BOTTE_MESSAGE"},"ExpirationTs":{"N":"1762020871"}}],"ScannedCount":1}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '312'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Date:
+      - Fri, 31 Oct 2025 19:15:35 GMT
+      Server:
+      - Server
+      x-amz-crc32:
+      - '2687463111'
+      x-amzn-RequestId:
+      - 9EAD1I8US34CUHE78ICT820P9BVV4KQNSO5AEMVJF66Q9ASUAAJG
+    status:
+      code: 200
+      message: OK
+version: 1

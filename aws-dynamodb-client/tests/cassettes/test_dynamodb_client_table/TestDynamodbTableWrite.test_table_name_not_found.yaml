@@ -1,0 +1,41 @@
+interactions:
+- request:
+    body: '{"TableName": "XXX"}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '20'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjA=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        RCxiLFAsbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS40MC42MyBSZXNvdXJjZQ==
+    method: POST
+    uri: https://dynamodb.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"__type":"com.amazonaws.dynamodb.v20120810#ResourceNotFoundException","message":"Requested
+        resource not found: Table: XXX not found"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '134'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Date:
+      - Fri, 31 Oct 2025 19:04:07 GMT
+      Server:
+      - Server
+      x-amz-crc32:
+      - '3909013285'
+      x-amzn-RequestId:
+      - HGTGAHTK7LH299HCP6KRR85OURVV4KQNSO5AEMVJF66Q9ASUAAJG
+    status:
+      code: 400
+      message: Bad Request
+version: 1

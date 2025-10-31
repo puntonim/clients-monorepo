@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: '{"TableName": "botte-be-task-prod", "KeyConditionExpression": "#n0 = :v0",
+      "ExpressionAttributeNames": {"#n0": "PK"}, "ExpressionAttributeValues": {":v0":
+      {"S": "XXX"}}}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '169'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjA=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1As
+        YixaLEQsbiBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS40MC42MyBSZXNvdXJjZQ==
+    method: POST
+    uri: https://dynamodb.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"Count":0,"Items":[],"ScannedCount":0}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '39'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Date:
+      - Fri, 31 Oct 2025 20:03:12 GMT
+      Server:
+      - Server
+      x-amz-crc32:
+      - '3413411624'
+      x-amzn-RequestId:
+      - L56O58291TJD428Q61UTBHO38NVV4KQNSO5AEMVJF66Q9ASUAAJG
+    status:
+      code: 200
+      message: OK
+version: 1

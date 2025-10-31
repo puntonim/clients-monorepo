@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"TableName": "botte-be-task-prod", "KeyConditionExpression": "#n0 = :v0",
+      "ExpressionAttributeNames": {"#n0": "PK"}, "ExpressionAttributeValues": {":v0":
+      {"S": "BOTTE_MESSAGE"}}}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '179'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC1hbXotanNvbi0xLjA=
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL2cs
+        YixQLFosRCBjZmcvcmV0cnktbW9kZSNsZWdhY3kgQm90b2NvcmUvMS40MC42MyBSZXNvdXJjZQ==
+      X-Amz-Security-Token:
+      - '**REDACTED**'
+    method: POST
+    uri: https://dynamodb.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: '{"__type":"com.amazon.coral.service#UnrecognizedClientException","message":"The
+        security token included in the request is invalid."}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '132'
+      Content-Type:
+      - application/x-amz-json-1.0
+      Date:
+      - Fri, 31 Oct 2025 20:01:49 GMT
+      Server:
+      - Server
+      x-amz-crc32:
+      - '3880715766'
+      x-amzn-RequestId:
+      - CDS948189D5G55I63TNU5825VFVV4KQNSO5AEMVJF66Q9ASUAAJG
+    status:
+      code: 400
+      message: Bad Request
+version: 1
