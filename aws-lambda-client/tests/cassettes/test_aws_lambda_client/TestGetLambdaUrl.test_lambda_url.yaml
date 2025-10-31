@@ -1,0 +1,31 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        bixiLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: GET
+    uri: https://lambda.eu-south-1.amazonaws.com/2021-10-31/functions/botte-be-prod-endpoint-introspection/url
+  response:
+    body:
+      string: '{"FunctionArn":"arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-introspection","FunctionUrl":"https://kvzlxwztgwjlardxdhiwgmcun40latmm.lambda-url.eu-south-1.on.aws/","CreationTime":"2025-10-31T12:54:23.624715062Z","LastModifiedTime":"2025-10-31T12:54:23.624715062Z","InvokeMode":"BUFFERED","AuthType":"NONE","Cors":null}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '343'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:04:29 GMT
+      x-amzn-RequestId:
+      - 537b1900-89cc-4645-93cf-0d1547b2240c
+    status:
+      code: 200
+      message: OK
+version: 1

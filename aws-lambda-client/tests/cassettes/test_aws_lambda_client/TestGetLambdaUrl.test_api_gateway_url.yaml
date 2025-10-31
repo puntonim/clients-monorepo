@@ -1,0 +1,187 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixuLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: GET
+    uri: https://lambda.eu-south-1.amazonaws.com/2021-10-31/functions/botte-be-prod-endpoint-message/url
+  response:
+    body:
+      string: '{"Type":"User","Message":"The resource you requested does not exist."}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:24 GMT
+      x-amzn-ErrorType:
+      - ResourceNotFoundException
+      x-amzn-RequestId:
+      - 350a4a4b-820c-4e4b-abf0-dc1d5ebd69b4
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixuLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: GET
+    uri: https://lambda.eu-south-1.amazonaws.com/2015-03-31/functions/botte-be-prod-endpoint-message/policy
+  response:
+    body:
+      string: '{"Policy":"{\"Version\":\"2012-10-17\",\"Id\":\"default\",\"Statement\":[{\"Sid\":\"botte-be-prod-EndpointDashmessageLambdaPermissionHttpApi-29mtVA5xngxw\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"apigateway.amazonaws.com\"},\"Action\":\"lambda:InvokeFunction\",\"Resource\":\"arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-message\",\"Condition\":{\"ArnLike\":{\"AWS:SourceArn\":\"arn:aws:execute-api:eu-south-1:477353422995:5t325uqwq7/*\"}}}]}","PublicAccessAllowed":false,"RevisionId":"6e97fe9e-cfa6-46cf-a71f-dfbd0f2aefd9"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '560'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:24 GMT
+      x-amzn-RequestId:
+      - 68effa96-faa9-4bf6-806c-32e0e339c6ef
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixEIGNmZy9yZXRyeS1tb2RlI2xlZ2FjeSBCb3RvY29yZS8xLjQwLjYz
+    method: GET
+    uri: https://apigateway.eu-south-1.amazonaws.com/v2/apis/5t325uqwq7
+  response:
+    body:
+      string: "{\n  \"apiId\" : \"5t325uqwq7\",\n  \"name\" : \"prod-botte-be\",\n
+        \ \"protocolType\" : \"HTTP\",\n  \"ipAddressType\" : \"ipv4\",\n  \"routeSelectionExpression\"
+        : \"$request.method $request.path\",\n  \"apiKeySelectionExpression\" : \"$request.header.x-api-key\",\n
+        \ \"apiEndpoint\" : \"https://5t325uqwq7.execute-api.eu-south-1.amazonaws.com\",\n
+        \ \"createdDate\" : \"2025-10-23T20:14:04Z\",\n  \"tags\" : {\n    \"aws:cloudformation:stack-name\"
+        : \"botte-be-prod\",\n    \"environment\" : \"prod\",\n    \"aws:cloudformation:stack-id\"
+        : \"arn:aws:cloudformation:eu-south-1:477353422995:stack/botte-be-prod/d00fb9e0-b04c-11f0-ad53-06e5ef50c0ad\",\n
+        \   \"STAGE\" : \"prod\",\n    \"managed-with\" : \"Serverless framework\",\n
+        \   \"aws:cloudformation:logical-id\" : \"HttpApi\",\n    \"project\" : \"botte-be\",\n
+        \   \"source\" : \"https://github.com/puntonim/botte-monorepo/blob/main/projects/botte-be/serverless.yml\",\n
+        \   \"monorepo\" : \"https://github.com/puntonim/botte-monorepo\"\n  },\n
+        \ \"disableExecuteApiEndpoint\" : false\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - x-amzn-RequestId,x-amzn-ErrorType,x-amzn-ErrorMessage,Date
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '948'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:24 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-6904bfcc-7eab04f24a1195294603208b
+      x-amz-apigw-id:
+      - TULn_GD8su8ErTQ=
+      x-amzn-RequestId:
+      - 032421c0-c6c7-49e0-ae83-721692893e5a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixEIGNmZy9yZXRyeS1tb2RlI2xlZ2FjeSBCb3RvY29yZS8xLjQwLjYz
+    method: GET
+    uri: https://apigateway.eu-south-1.amazonaws.com/v2/apis/5t325uqwq7/integrations
+  response:
+    body:
+      string: '{"items":[{"integrationId":"3qb6yh0","integrationType":"AWS_PROXY","integrationMethod":"POST","integrationUri":"arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-introspection","connectionType":"INTERNET","timeoutInMillis":30000,"payloadFormatVersion":"2.0"},{"integrationId":"jwsq0jf","integrationType":"AWS_PROXY","integrationMethod":"POST","integrationUri":"arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-message","connectionType":"INTERNET","timeoutInMillis":30000,"payloadFormatVersion":"2.0"}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - x-amzn-RequestId,x-amzn-ErrorType,x-amzn-ErrorMessage,Date
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '545'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:24 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-6904bfcc-0b3fee220875ab5f04a0453a
+      x-amz-apigw-id:
+      - TULoBHAzsu8EFlg=
+      x-amzn-RequestId:
+      - 94437cd3-9e07-4afb-b4b9-b9365811a54e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixEIGNmZy9yZXRyeS1tb2RlI2xlZ2FjeSBCb3RvY29yZS8xLjQwLjYz
+    method: GET
+    uri: https://apigateway.eu-south-1.amazonaws.com/v2/apis/5t325uqwq7/routes
+  response:
+    body:
+      string: '{"items":[{"routeId":"426oouh","routeKey":"POST /message","authorizationType":"CUSTOM","authorizerId":"5msjto","authorizationScopes":[],"apiKeyRequired":false,"requestModels":{},"target":"integrations/jwsq0jf"},{"routeId":"bcw9ek5","routeKey":"GET
+        /health","authorizationType":"NONE","authorizationScopes":[],"apiKeyRequired":false,"requestModels":{},"target":"integrations/3qb6yh0"},{"routeId":"qgc50cm","routeKey":"GET
+        /version","authorizationType":"NONE","authorizationScopes":[],"apiKeyRequired":false,"requestModels":{},"target":"integrations/3qb6yh0"},{"routeId":"zkhx2aa","routeKey":"GET
+        /unhealth","authorizationType":"NONE","authorizationScopes":[],"apiKeyRequired":false,"requestModels":{},"target":"integrations/3qb6yh0"}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - x-amzn-RequestId,x-amzn-ErrorType,x-amzn-ErrorMessage,Date
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '734'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:24 GMT
+      X-Amzn-Trace-Id:
+      - Root=1-6904bfcc-53ffc1800ca5bb3378240d99
+      x-amz-apigw-id:
+      - TULoDF5pMu8EBVg=
+      x-amzn-RequestId:
+      - 981a3424-f84c-4826-89c0-5fa4952a4a08
+    status:
+      code: 200
+      message: OK
+version: 1

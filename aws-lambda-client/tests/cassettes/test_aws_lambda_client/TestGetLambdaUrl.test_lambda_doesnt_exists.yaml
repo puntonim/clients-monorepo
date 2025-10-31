@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        bixiLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: GET
+    uri: https://lambda.eu-south-1.amazonaws.com/2021-10-31/functions/XXX/url
+  response:
+    body:
+      string: '{"Type":"User","Message":"The resource you requested does not exist."}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:34 GMT
+      x-amzn-ErrorType:
+      - ResourceNotFoundException
+      x-amzn-RequestId:
+      - 6a28e9d1-9593-4235-937d-5f85fa8aedaa
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42MyBtZC9Cb3RvY29yZSMxLjQwLjYzIHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        bixiLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjM=
+    method: GET
+    uri: https://lambda.eu-south-1.amazonaws.com/2015-03-31/functions/XXX/policy
+  response:
+    body:
+      string: '{"Message":"The resource you requested does not exist.","Type":"User"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 31 Oct 2025 13:55:34 GMT
+      x-amzn-ErrorType:
+      - ResourceNotFoundException
+      x-amzn-RequestId:
+      - 86096167-d531-4ac6-8996-48ba1746392f
+    status:
+      code: 404
+      message: Not Found
+version: 1

@@ -2,18 +2,22 @@
 ========================
 
 Just a collection of popular Python clients, used across others repos.\
-Examples: clients for AWS infra services (Parameter Store, SNS, SQS, DynamoDB, ...),\
- clients for other infra services (Google Cloud, Microsoft Azure), clients for web
- services like Gmail API, etc.
+Examples: clients for AWS infra services (Parameter Store, Lambda, SNS, SQS, DynamoDB, 
+ ...),\ clients for other infra services (Google Cloud, Microsoft Azure), clients for
+ web services like Gmail API, etc.
 
 Each client is a standalone Python project that can be installed individually 
  from the subdir.
 
+List of clients:
+ - [aws-parameter-store-client](aws-parameter-store-client): to read/write parameters 
+    and secrets from AWS Parameter Store. 
+ - [aws-lambda-client](aws-lambda-client): to get a Lambda URL; to invoke a Lambda with
+    a custom event.
+
 
 🎯 Target Python version
 =========================
-
----
 
 The target is a Python version that is recent enough, but not too recent for a wide
  compatibility.\
@@ -24,8 +28,6 @@ Python 3.10 seems a good compromise.
 
 🛠️ Development setup
 ====================
-
----
 
 1 - System requirements
 ----------------------
@@ -127,16 +129,13 @@ $ pre-commit install
 🚀 Deployment
 =============
 
----
-
-These clients are not deployed to PyPI.\
-See the individual `README.md` file in each client subdir to know how to install and use
- each client.
+Libs are *not deployed* as they can be (pip-)installed directly from Github o local dir 
+ (see Usage section in each lib's main README.md).\
+And *not versioned* as when (pip-)installing from Github, it is possible to choose
+ any version with a hash commit (see Usage section in each lib's main README.md).
 
 
 ©️ Copyright
 =============
-
----
 
 Copyright puntonim (https://github.com/puntonim). No License.

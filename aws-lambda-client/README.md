@@ -1,29 +1,28 @@
-**🟠 Clients monorepo: AWS Parameter Store Client**
-====================================================
+**🟠 Clients monorepo: AWS Lambda Client**
+==========================================
 
-Just a Python client for AWS Parameter Store.\
+Just a Python client for AWS Lambda.\
 It is a wrapper around (and an interface to) [boto3](https://boto3.amazonaws.com).
 
 
 ⚡ Usage
 =======
 
-See top docstrings in [aws_parameter_store_client.py](aws_parameter_store_client/aws_parameter_store_client.py).
-
+See top docstrings in [aws_lambda_client.py](aws_lambda_client/aws_lambda_client.py).
 
 Poetry install
 --------------
 From Github:
 ```sh
-$ poetry add git+https://github.com/puntonim/clients-monorepo#subdirectory=aws-parameter-store-client
+$ poetry add git+https://github.com/puntonim/clients-monorepo#subdirectory=aws-lambda-client
 # at a specific version:
-$ poetry add git+https://github.com/puntonim/clients-monorepo@00a49cb64524df19bf55ab5c7c1aaf4c09e92360#subdirectory=aws-parameter-store-client
+$ poetry add git+https://github.com/puntonim/clients-monorepo@00a49cb64524df19bf55ab5c7c1aaf4c09e92360#subdirectory=aws-lambda-client
 ```
 
 From a local dir:
 ```sh
-$ poetry add ../clients-monorepo/aws-parameter-store-client/
-$ poetry add "aws-parameter-store-client @ file:///Users/myuser/workspace/clients-monorepo/aws-parameter-store-client/"
+$ poetry add ../clients-monorepo/aws-lambda-client/
+$ poetry add "aws-lambda-client @ file:///Users/myuser/workspace/clients-monorepo/aws-lambda-client/"
 ```
 
 Pip install
