@@ -5,6 +5,8 @@
 Note: there is also a function create_table() in dynamodb_client_base.py, particularly
  useful in tests. See top docstring in that file.
 
+Note: there are other Dynamodb utils to check in mundi and odd-manager.
+
 ```py
 import aws_dynamodb_client
 
@@ -231,6 +233,16 @@ class DynamodbTable(DynamodbClientBase):
         # ) as exc:
         #     raise exceptions.GenericBotoError from exc
 
+        # response like:
+        # {'ResponseMetadata': {
+        #     'RequestId': 'SSAOU4PD9U9NKQ7PVEDBKCJ7KVVV4KQNSO5AEMVJF66Q9ASUAAJG',
+        #     'HTTPStatusCode': 200,
+        #     'HTTPHeaders': {'connection': 'keep-alive', 'content-length': '2',
+        #                     'content-type': 'application/x-amz-json-1.0',
+        #                     'date': 'Fri, 31 Oct 2025 18:53:59 GMT', 'server': 'Server',
+        #                     'x-amz-crc32': '2745614147',
+        #                     'x-amzn-requestid': 'SSAOU4PD9U9NKQ7PVEDBKCJ7KVVV4KQNSO5AEMVJF66Q9ASUAAJG'},
+        #     'RetryAttempts': 0}}
         return response
 
     @handle_common_exceptions
@@ -256,6 +268,22 @@ class DynamodbTable(DynamodbClientBase):
             ):
                 raise exceptions.PkAttrValueNonString(pk_value) from exc
             raise
+
+        # items like:
+        # {'Items': [{'Payload': {
+        #     'text': 'Hello world from (clients-monorepo) DynamoDB Client Pytest'},
+        #             'SenderService': 'DYNAMODB_CLIENT_PYTEST',
+        #             'SK': '2XxEn9LlUFuTyn0tOCySn11smMS', 'TaskId': 'BOTTE_MESSAGE',
+        #             'PK': 'BOTTE_MESSAGE', 'ExpirationTs': Decimal('1762020871')}],
+        #  'Count': 1, 'ScannedCount': 1, 'ResponseMetadata': {
+        #     'RequestId': '9EAD1I8US34CUHE78ICT820P9BVV4KQNSO5AEMVJF66Q9ASUAAJG',
+        #     'HTTPStatusCode': 200,
+        #     'HTTPHeaders': {'connection': 'keep-alive', 'content-length': '312',
+        #                     'content-type': 'application/x-amz-json-1.0',
+        #                     'date': 'Fri, 31 Oct 2025 19:15:35 GMT', 'server': 'Server',
+        #                     'x-amz-crc32': '2687463111',
+        #                     'x-amzn-requestid': '9EAD1I8US34CUHE78ICT820P9BVV4KQNSO5AEMVJF66Q9ASUAAJG'},
+        #     'RetryAttempts': 0}}
         return items
 
     @handle_common_exceptions
@@ -265,4 +293,20 @@ class DynamodbTable(DynamodbClientBase):
         """
         # TODO implement pagination.
         items = self.table.scan()
+
+        # items like:
+        # {'Items': [{'Payload': {
+        #     'text': 'Hello world from (clients-monorepo) DynamoDB Client Pytest'},
+        #             'SenderService': 'DYNAMODB_CLIENT_PYTEST',
+        #             'SK': '2XxEn9LlUFuTyn0tOCySn11smMS', 'TaskId': 'BOTTE_MESSAGE',
+        #             'PK': 'BOTTE_MESSAGE', 'ExpirationTs': Decimal('1762020871')}],
+        #  'Count': 1, 'ScannedCount': 1, 'ResponseMetadata': {
+        #     'RequestId': 'TT315IPDK2G7LM0522RTHR9L7JVV4KQNSO5AEMVJF66Q9ASUAAJG',
+        #     'HTTPStatusCode': 200,
+        #     'HTTPHeaders': {'connection': 'keep-alive', 'content-length': '312',
+        #                     'content-type': 'application/x-amz-json-1.0',
+        #                     'date': 'Fri, 31 Oct 2025 20:04:48 GMT', 'server': 'Server',
+        #                     'x-amz-crc32': '2687463111',
+        #                     'x-amzn-requestid': 'TT315IPDK2G7LM0522RTHR9L7JVV4KQNSO5AEMVJF66Q9ASUAAJG'},
+        #     'RetryAttempts': 0}}
         return items

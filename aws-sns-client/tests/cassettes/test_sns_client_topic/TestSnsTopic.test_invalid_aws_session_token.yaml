@@ -1,0 +1,41 @@
+interactions:
+- request:
+    body: Action=Publish&Version=2010-03-31&TopicArn=arn%3Aaws%3Asns%3Aeu-south-1%3A477353422995%3Aaws-watchdog-errors-prod&Message=%7B%22error%22%3A+%22Ooooh+error%21%22%7D&MessageAttributes.entry.1.Name=content_type&MessageAttributes.entry.1.Value.DataType=String&MessageAttributes.entry.1.Value.StringValue=application%2Fjson
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '318'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkOyBjaGFyc2V0PXV0Zi04
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42NCBtZC9Cb3RvY29yZSMxLjQwLjY0IHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixnLEQgY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjQgUmVzb3VyY2U=
+      X-Amz-Security-Token:
+      - '**REDACTED**'
+    method: POST
+    uri: https://sns.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: "<ErrorResponse xmlns=\"http://sns.amazonaws.com/doc/2010-03-31/\">\n
+        \ <Error>\n    <Type>Sender</Type>\n    <Code>InvalidClientTokenId</Code>\n
+        \   <Message>The security token included in the request is invalid.</Message>\n
+        \ </Error>\n  <RequestId>cf68728c-d000-5e02-ad4c-130db787ee75</RequestId>\n</ErrorResponse>\n"
+    headers:
+      Content-Length:
+      - '305'
+      Content-Type:
+      - text/xml
+      Date:
+      - Sun, 02 Nov 2025 14:05:59 GMT
+      connection:
+      - keep-alive
+      x-amzn-RequestId:
+      - cf68728c-d000-5e02-ad4c-130db787ee75
+    status:
+      code: 403
+      message: Forbidden
+version: 1

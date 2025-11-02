@@ -1,6 +1,6 @@
 [project]
-name = "aws-parameter-store-client"
-description = "Clients Monorepo: AWS Parameter Store Client"
+name = "aws-sns-client"
+description = "Clients Monorepo: AWS SNS Client"
 version = "1.0.0"
 authors = [
     {name = "puntonim",email = "puntonim@gmail.com"}
@@ -11,7 +11,9 @@ dependencies = [
     # Boto is already included in Lambda Python runtime, but this client might be used
     #  anywhere, not just in a Lambda.
     "boto3 (>=1.27.1,<2)",
-    "cache-utils @ git+https://github.com/puntonim/utils-monorepo#subdirectory=cache-utils",
+    "mypy-boto3-sns (>=1.27.1,<2)",
+    "log-utils @ git+https://github.com/puntonim/utils-monorepo#subdirectory=log-utils",
+    "json-utils @ git+https://github.com/puntonim/utils-monorepo#subdirectory=json-utils",
 ]
 
 [build-system]

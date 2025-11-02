@@ -1,0 +1,39 @@
+interactions:
+- request:
+    body: Action=Publish&Version=2010-03-31&TopicArn=arn%3Aaws%3Asns%3Aeu-south-1%3A477353422995%3Aaws-watchdog-errors-prod&Message=%7B%22error%22%3A+%22Ooooh+error%21%22%7D&MessageAttributes.entry.1.Name=content_type&MessageAttributes.entry.1.Value.DataType=String&MessageAttributes.entry.1.Value.StringValue=application%2Fjson
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '318'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkOyBjaGFyc2V0PXV0Zi04
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42NCBtZC9Cb3RvY29yZSMxLjQwLjY0IHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        RCxiLG4gY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjQgUmVzb3VyY2U=
+    method: POST
+    uri: https://sns.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: "<PublishResponse xmlns=\"http://sns.amazonaws.com/doc/2010-03-31/\">\n
+        \ <PublishResult>\n    <MessageId>8e7fc102-37c5-555a-aba0-a08351f117e8</MessageId>\n
+        \ </PublishResult>\n  <ResponseMetadata>\n    <RequestId>ba14fb35-2ab2-56a0-ba6f-9ab44c862412</RequestId>\n
+        \ </ResponseMetadata>\n</PublishResponse>\n"
+    headers:
+      Content-Length:
+      - '294'
+      Content-Type:
+      - text/xml
+      Date:
+      - Sun, 02 Nov 2025 14:00:20 GMT
+      connection:
+      - keep-alive
+      x-amzn-RequestId:
+      - ba14fb35-2ab2-56a0-ba6f-9ab44c862412
+    status:
+      code: 200
+      message: OK
+version: 1

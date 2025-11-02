@@ -263,6 +263,28 @@ resolved_reference = "f8feffa2c2ff37840749d1bf0a2c1b9eda26bff9"
 subdirectory = "json-utils"
 
 [[package]]
+name = "log-utils"
+version = "1.0.0"
+description = "Utils Monorepo: Log Utils"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = []
+develop = false
+
+[package.extras]
+loguru-adapter = ["loguru (>=0.7.3,<0.8.0) ; python_version < \"4\""]
+powertools-adapter = ["aws-lambda-powertools (>=3.5.0,<4.0.0) ; python_version < \"4\""]
+rich-adapter = ["rich (>=13.9.4,<14.0.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/puntonim/utils-monorepo"
+reference = "HEAD"
+resolved_reference = "f8feffa2c2ff37840749d1bf0a2c1b9eda26bff9"
+subdirectory = "log-utils"
+
+[[package]]
 name = "matplotlib-inline"
 version = "0.2.1"
 description = "Inline Matplotlib backend for Jupyter"
@@ -438,6 +460,21 @@ files = [
 
 [package.dependencies]
 typing-extensions = {version = ">=4.1.0", markers = "python_version < \"3.11\""}
+
+[[package]]
+name = "mypy-boto3-sns"
+version = "1.40.57"
+description = "Type annotations for boto3 SNS 1.40.57 service generated with mypy-boto3-builder 8.11.0"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "mypy_boto3_sns-1.40.57-py3-none-any.whl", hash = "sha256:65c5559a321b3c959bc8cd0a827fd89660f6a150a18880ebc8a0ff736f4c97af"},
+    {file = "mypy_boto3_sns-1.40.57.tar.gz", hash = "sha256:3be481d27b67684cc6507abf189004f2d08f2dc21a4dcb96209f39d2bbf4573f"},
+]
+
+[package.dependencies]
+typing-extensions = {version = "*", markers = "python_version < \"3.12\""}
 
 [[package]]
 name = "packaging"
@@ -1040,12 +1077,12 @@ version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
-groups = ["dev", "test"]
+groups = ["main", "dev", "test"]
 files = [
     {file = "typing_extensions-4.15.0-py3-none-any.whl", hash = "sha256:f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"},
     {file = "typing_extensions-4.15.0.tar.gz", hash = "sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"},
 ]
-markers = {dev = "python_version < \"3.12\"", test = "python_version == \"3.10\""}
+markers = {main = "python_version < \"3.12\"", dev = "python_version < \"3.12\"", test = "python_version == \"3.10\""}
 
 [[package]]
 name = "urllib3"
@@ -1388,4 +1425,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10"
-content-hash = "63b64fb6a431cc264aaf4225d26a2bb92342d19da0cd7968a20de8870af41789"
+content-hash = "d765b02349e2a7ef7e8ba8bdc1b923ef4431c98cdf6cc6a0cbffa4f3d6106b85"

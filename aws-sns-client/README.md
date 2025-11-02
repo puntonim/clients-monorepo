@@ -1,31 +1,29 @@
-**🟠 Clients monorepo: AWS DynamoDB Client**
-=============================================
+**🟠 Clients monorepo: AWS SNS Client**
+=======================================
 
-Just a Python client for AWS DynamoDB.\
+Just a Python client for AWS SNS.\
 It is a wrapper around (and an interface to) [boto3](https://boto3.amazonaws.com).
-
-*Note: there are other Dynamodb utils to check in mundi and odd-manager.*
 
 
 ⚡ Usage
 =======
 
-See top docstrings in [dynamodb_client_table.py](aws_dynamodb_client/dynamodb_client_table.py).
+See top docstrings in [sns_client_topic.py](aws_sns_client/sns_client_topic.py).
 
 
 Poetry install
 --------------
 From Github:
 ```sh
-$ poetry add git+https://github.com/puntonim/clients-monorepo#subdirectory=aws-dynamodb-client
+$ poetry add git+https://github.com/puntonim/clients-monorepo#subdirectory=aws-sns-client
 # at a specific version:
-$ poetry add git+https://github.com/puntonim/clients-monorepo@00a49cb64524df19bf55ab5c7c1aaf4c09e92360#subdirectory=aws-dynamodb-client
+$ poetry add git+https://github.com/puntonim/clients-monorepo@00a49cb64524df19bf55ab5c7c1aaf4c09e92360#subdirectory=aws-sns-client
 ```
 
 From a local dir:
 ```sh
-$ poetry add ../clients-monorepo/aws-dynamodb-client/
-$ poetry add "aws-dynamodb-client @ file:///Users/myuser/workspace/clients-monorepo/aws-dynamodb-client/"
+$ poetry add ../clients-monorepo/aws-sns-client/
+$ poetry add "aws-sns-client @ file:///Users/myuser/workspace/clients-monorepo/aws-sns-client/"
 ```
 
 Pip install
