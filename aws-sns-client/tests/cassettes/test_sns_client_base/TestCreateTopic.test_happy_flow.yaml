@@ -1,0 +1,39 @@
+interactions:
+- request:
+    body: Action=CreateTopic&Version=2010-03-31&Name=aws-watchdog-pytest-topic
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '68'
+      Content-Type:
+      - !!binary |
+        YXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkOyBjaGFyc2V0PXV0Zi04
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42NCBtZC9Cb3RvY29yZSMxLjQwLjY0IHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL0Qs
+        bixiLFogY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjQ=
+    method: POST
+    uri: https://sns.eu-south-1.amazonaws.com/
+  response:
+    body:
+      string: "<CreateTopicResponse xmlns=\"http://sns.amazonaws.com/doc/2010-03-31/\">\n
+        \ <CreateTopicResult>\n    <TopicArn>arn:aws:sns:eu-south-1:477353422995:aws-watchdog-pytest-topic</TopicArn>\n
+        \ </CreateTopicResult>\n  <ResponseMetadata>\n    <RequestId>a12f8ff4-1eda-5a14-ab54-ee76a83b206c</RequestId>\n
+        \ </ResponseMetadata>\n</CreateTopicResponse>\n"
+    headers:
+      Content-Length:
+      - '333'
+      Content-Type:
+      - text/xml
+      Date:
+      - Mon, 03 Nov 2025 13:56:49 GMT
+      connection:
+      - keep-alive
+      x-amzn-RequestId:
+      - a12f8ff4-1eda-5a14-ab54-ee76a83b206c
+    status:
+      code: 200
+      message: OK
+version: 1

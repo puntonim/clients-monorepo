@@ -7,6 +7,14 @@ from mypy_boto3_sns.service_resource import SNSServiceResource
 
 from . import sns_client_base_exceptions as exceptions
 
+__all__ = [
+    "create_topic",
+    "REGION_NAME_N_VIRGINIA",
+    "REGION_NAME_SINGAPORE",
+    "REGION_NAME_MILAN",
+    "REGION_NAME_DEFAULT",
+]
+
 REGION_NAME_N_VIRGINIA = "us-east-1"
 REGION_NAME_SINGAPORE = "ap-southeast-1"
 REGION_NAME_MILAN = "eu-south-1"
@@ -50,3 +58,12 @@ class SnsClientBase(ABC):  # noqa: B024
 
         # To access the underlying low-level client:
         self.sns_client: SNSClient = self.sns_resource.meta.client
+
+
+def create_topic(topic_name: str, region_name: str | None = None) -> str:
+    if not region_name:
+        region_name = REGION_NAME_DEFAULT
+    client = boto3.client("sns", region_name=region_name)
+    response = client.create_topic(Name=topic_name)
+    topic_arn = response["TopicArn"]
+    return topic_arn

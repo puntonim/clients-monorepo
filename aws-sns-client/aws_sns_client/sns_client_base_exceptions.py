@@ -1,3 +1,11 @@
+__all__ = [
+    "BaseSnsClientException",
+    "BaseErrorResponse",
+    "BotoAuthError",
+    "BotoAuthErrorTokenExpired",
+]
+
+
 class BaseSnsClientException(Exception):
     pass
 
