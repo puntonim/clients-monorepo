@@ -62,7 +62,7 @@ class AwsLambdaClient:
              "477353422995:function:botte-be-prod-endpoint-message"
             payload: anything that can be converted to JSON.
         """
-        payload = json_utils.to_json(payload)
+        payload = json_utils.to_json_string(payload)
         payload = payload.encode()
         # Docs: https://boto3.amazonaws.com/v1/documentation/api/1.26.92/reference/services/lambda/client/invoke.html
         try:
