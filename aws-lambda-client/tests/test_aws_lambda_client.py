@@ -34,13 +34,25 @@ class TestInvoke:
     def setup_method(self):
         self.client = aws_lambda_client.AwsLambdaClient()
 
-    def test_happy_flow(self):
+    def test_sync(self):
         payload = {
-            "text": "Hello world from aws-lambda-client pytests!",
+            "text": "Hello world from (clients-monorepo) aws-lambda-client pytests sync!",
             "sender_app": "AWS_LAMBDA_CLIENT",
         }
         resp = self.client.invoke("botte-be-prod-message", payload=payload)
         assert resp["StatusCode"] == 200
+
+    def test_async(self):
+        payload = {
+            "text": "Hello world from (clients-monorepo) aws-lambda-client pytests async!",
+            "sender_app": "AWS_LAMBDA_CLIENT",
+        }
+        resp = self.client.invoke(
+            "botte-be-prod-message",
+            payload=payload,
+            do_invoke_sync=False,
+        )
+        assert resp["StatusCode"] == 202
 
     def test_lambda_doesnt_exists(self):
         with pytest.raises(aws_lambda_client.LambdaNotFound):

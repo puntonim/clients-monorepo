@@ -52,7 +52,7 @@ class AwsLambdaClient:
         # Docs: https://boto3.amazonaws.com/v1/documentation/api/1.26.92/reference/services/lambda.html
         self.client = boto3.client("lambda")
 
-    def invoke(self, lambda_name: str, payload: Any):
+    def invoke(self, lambda_name: str, payload: Any, do_invoke_sync: bool = True):
         """
         Invoke a Lambda with a payload.
 
@@ -61,12 +61,17 @@ class AwsLambdaClient:
              "arn:aws:lambda:eu-south-1:477353422995:function:botte-be-prod-endpoint-message" or
              "477353422995:function:botte-be-prod-endpoint-message"
             payload: anything that can be converted to JSON.
+            do_invoke_sync: False to invoke the Lambda asynchronously.
         """
         payload = json_utils.to_json_string(payload)
         payload = payload.encode()
-        # Docs: https://boto3.amazonaws.com/v1/documentation/api/1.26.92/reference/services/lambda/client/invoke.html
         try:
-            response = self.client.invoke(FunctionName=lambda_name, Payload=payload)
+            # Docs: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/lambda/client/invoke.html
+            response = self.client.invoke(
+                FunctionName=lambda_name,
+                Payload=payload,
+                InvocationType="RequestResponse" if do_invoke_sync else "Event",
+            )
         except self.client.exceptions.ResourceNotFoundException as exc:
             raise LambdaNotFound(lambda_name) from exc
         return response

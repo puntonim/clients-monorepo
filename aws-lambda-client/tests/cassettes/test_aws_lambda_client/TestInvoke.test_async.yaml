@@ -1,0 +1,39 @@
+interactions:
+- request:
+    body: '{"text": "Hello world from (clients-monorepo) aws-lambda-client pytests
+      async!", "sender_app": "AWS_LAMBDA_CLIENT"}'
+    headers:
+      Authorization:
+      - '**REDACTED**'
+      Content-Length:
+      - '115'
+      User-Agent:
+      - !!binary |
+        Qm90bzMvMS40MC42OSBtZC9Cb3RvY29yZSMxLjQwLjY5IHVhLzIuMSBvcy9tYWNvcyMyMi42LjAg
+        bWQvYXJjaCN4ODZfNjQgbGFuZy9weXRob24jMy4xMC4xNiBtZC9weWltcGwjQ1B5dGhvbiBtL1os
+        YixELG4gY2ZnL3JldHJ5LW1vZGUjbGVnYWN5IEJvdG9jb3JlLzEuNDAuNjk=
+      X-Amz-Invocation-Type:
+      - !!binary |
+        RXZlbnQ=
+    method: POST
+    uri: https://lambda.eu-south-1.amazonaws.com/2015-03-31/functions/botte-be-prod-message/invocations
+  response:
+    body:
+      string: ''
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Mon, 10 Nov 2025 13:49:53 GMT
+      X-Amzn-Trace-Id:
+      - root=1-6911ed81-0e962889281b56606f53ae32;parent=3da27b7081ae607f;sampled=0
+      x-amzn-Remapped-Content-Length:
+      - '0'
+      x-amzn-RequestId:
+      - d92a97d1-0167-452d-99a9-98bad0e2f7f2
+    status:
+      code: 202
+      message: Accepted
+version: 1
